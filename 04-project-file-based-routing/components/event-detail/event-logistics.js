@@ -15,6 +15,7 @@ function EventLogistics(props) {
 
   return (
     <section className={classes.logistics}>
+      <h2>{imageAlt}</h2>
       <div className={classes.image}>
         <img src={`/${image}`} alt={imageAlt} />
       </div>
