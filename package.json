@@ -4,7 +4,10 @@
   "description": "This Repository is for the projects and sections of the udemy tutorial \"Next.js &amp; React - The Complete Guide (incl. Two Paths!)\" by Maximilian Schwarzmüller.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "03": "cd 03-page-file-based-routing && npm i && npm run dev",
+    "04": "cd 04-project-file-based-routing && npm i && npm run dev",
+    "05": "cd 05-pre-render-and-data-fetching && npm i && npm run dev",
+    "start": "cd 05-pre-render-and-data-fetching && npm i && npm run dev"
   },
   "repository": {
     "type": "git",
