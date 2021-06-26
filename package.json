@@ -7,7 +7,8 @@
     "03": "cd 03-page-file-based-routing && npm i && npm run dev",
     "04": "cd 04-project-file-based-routing && npm i && npm run dev",
     "05": "cd 05-pre-render-and-data-fetching && npm i && npm run dev",
-    "start": "cd 05-pre-render-and-data-fetching && npm i && npm run dev"
+    "06": "cd 06-project-pre-rendering-and-fetching && npm i && npm run dev",
+    "start": "npm run 06"
   },
   "repository": {
     "type": "git",
