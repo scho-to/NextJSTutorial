@@ -1,9 +1,9 @@
 {
-  "name": "04-project-file-based-routing",
+  "name": "06-project-pre-rendering-and-fetching",
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --port 8001",
+    "dev": "next dev",
     "build": "next build",
     "start": "next start"
   },
