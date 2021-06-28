@@ -1,6 +1,7 @@
 import { Fragment, useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import useSWR from 'swr';
+import Head from 'next/head';
 
 import { getEvents, getFilteredEvents, API_DOMAIN } from '../../api/events';
 import EventList from '../../components/events/event-list';
@@ -34,12 +35,29 @@ export default function FilteredEventPage(props) {
     }
   }, [data]);
 
+  let pageHeadData = <Head>
+    <title>Filtered Events</title>
+    <meta name="description" content={`List of filtered events`} />
+  </Head>
+
   if (!loadedEvents) {
-    return <p className='center'>Loading...</p>
+    return (
+      <Fragment>
+        {pageHeadData}
+        <p className='center'>Loading...</p>
+      </Fragment>
+    );
   }
 
   filteredYear = +filterData[0];
   filteredMonth = +filterData[1];
+
+  pageHeadData = (
+    <Head>
+      <title>Filtered Events</title>
+      <meta name="description" content={`All events for ${filteredMonth}/${filteredYear}`} />
+    </Head>
+  );
 
   if (
     isNaN(filteredYear) ||
@@ -52,6 +70,7 @@ export default function FilteredEventPage(props) {
   ) {
     return (
       <Fragment>
+        { pageHeadData }
         <ErrorAlert>
           <p className='center'>Invalid Filter. Please check the filter values.</p>
         </ErrorAlert>
@@ -70,6 +89,7 @@ export default function FilteredEventPage(props) {
   if (!filteredEvents || filteredEvents.length === 0) {
     return (
       <Fragment>
+        {pageHeadData}
         <ErrorAlert>
           <p className='center'>No Events found for your filter</p>
         </ErrorAlert>
@@ -84,6 +104,7 @@ export default function FilteredEventPage(props) {
 
   return (
     <Fragment>
+      {pageHeadData}
       <ResultsTitle date={date} />
       <EventList items={filteredEvents} />
     </Fragment>

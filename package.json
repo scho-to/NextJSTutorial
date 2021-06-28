@@ -8,7 +8,8 @@
     "04": "cd 04-project-file-based-routing && npm i && npm run dev",
     "05": "cd 05-pre-render-and-data-fetching && npm i && npm run dev",
     "06": "cd 06-project-pre-rendering-and-fetching && npm i && npm run dev",
-    "start": "npm run 06"
+    "07": "cd 07-optimizing-nextjs && npm i && npm run dev",
+    "start": "npm run 07"
   },
   "repository": {
     "type": "git",
@@ -20,12 +21,5 @@
   "bugs": {
     "url": "https://github.com/scho-to/NextJSTutorial/issues"
   },
-  "homepage": "https://github.com/scho-to/NextJSTutorial#readme",
-  "dependencies": {
-    "next": "^10.2.0",
-    "react": "^17.0.2"
-  },
-  "engines": {
-    "node": "14.x"
-  }
+  "homepage": "https://github.com/scho-to/NextJSTutorial#readme"
 }
