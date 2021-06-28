@@ -1,7 +1,7 @@
 import { Fragment } from 'react';
 import { useRouter } from 'next/router';
 
-import getEvents from '../../api/events';
+import { getEventById, getEvents } from '../../api/events';
 import EventLogistics from '../../components/event-detail/event-logistics';
 import EventContent from '../../components/event-detail/event-content';
 import ErrorAlert from '../../components/ui/error-alert';
@@ -33,8 +33,7 @@ export async function getStaticProps(context) {
   const { params } = context
   const id = params.id;
 
-  const events = await getEvents();
-  const event = events.find(event => event.id === id);
+  const event = await getEventById(id);
 
   return {
     props: { id: id, event: event },

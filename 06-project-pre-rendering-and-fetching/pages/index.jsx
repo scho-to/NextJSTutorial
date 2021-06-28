@@ -1,4 +1,4 @@
-import getEvents from '../api/events';
+import { getFeaturedEvents } from '../api/events';
 
 import EventList from '../components/events/event-list';
 
@@ -13,14 +13,10 @@ export default function HomePage(props) {
 };
 
 export async function getStaticProps(props) {
-  const events = await getEvents();
-
-  const transformedEvents = events.filter(event => {
-    return event.isFeatured === true;
-  });
+  const events = await getFeaturedEvents();
 
   return {
-    props: { featuredEvents: transformedEvents },
+    props: { featuredEvents: events },
     revalidate: 10
   }
 }

@@ -1,7 +1,7 @@
 import { Fragment } from 'react';
 import { useRouter } from 'next/router';
 
-import getEvents from '../../api/events';
+import { getEvents, getFilteredEvents } from '../../api/events';
 import EventList from '../../components/events/event-list';
 import EventsSearch from '../../components/events/events-search';
 import ResultsTitle from '../../components/events/results-title';
@@ -49,20 +49,16 @@ export default function FilteredEventPage(props) {
 
 export async function getServerSideProps(context) {
   const { params, res, req } = context;
-  const events = await getEvents();
-  let filteredEvents = [];
+  let events = [];
 
   let filteredYear = +params.slug[0];
   let filteredMonth = +params.slug[1];
 
-  filteredEvents = events.filter(event => {
-    const eventDate = new Date(event.date);
-    return eventDate.getFullYear() === filteredYear && eventDate.getMonth() === filteredMonth - 1;
-  });
+  events = await getFilteredEvents(filteredYear, filteredMonth);
 
   return {
     props: {
-      events: filteredEvents
+      events: events
     }
   }
 }
