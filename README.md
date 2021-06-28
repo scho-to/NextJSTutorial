@@ -17,4 +17,4 @@ my Decisions:
 - Event Detail Page, Path: /events/[id] -> getStaticProps with revalidation of 5 seconds and getStaticPaths for every featrued Event with fallback enabled.
 - Filtered Event Page, Path: /events/[...slug] -> getServerSideProps
 
-"dummy-date.json" removed. I created an folder api beneath the components folder. This API Folder holds the async request to Firebase with transformation of the resuls. This API gets called in every page accessing events.
+"dummy-date.json" removed. I created an folder "api" beneath the components folder. This API Folder holds the async request to Firebase with transformation of the results. This API gets called in every page accessing events.
