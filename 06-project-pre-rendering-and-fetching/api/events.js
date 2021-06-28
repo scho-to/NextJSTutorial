@@ -1,6 +1,8 @@
+export const API_DOMAIN = 'https://nextjs-course-udemy-default-rtdb.europe-west1.firebasedatabase.app/events.json';
+
 export async function getEvents() {
 
-  const response = await fetch('https://nextjs-course-udemy-default-rtdb.europe-west1.firebasedatabase.app/events.json');
+  const response = await fetch(API_DOMAIN);
   const data = await response.json();
 
   const transformedEvents = [];
@@ -26,19 +28,6 @@ export async function getEventById(id) {
 }
 
 export async function getFilteredEvents(year, month) {
-  /*
-  const { params, res, req } = context;
-  const events = await getEvents();
-  let filteredEvents = [];
-
-  let filteredYear = +params.slug[0];
-  let filteredMonth = +params.slug[1];
-
-  filteredEvents = events.filter(event => {
-    const eventDate = new Date(event.date);
-    return eventDate.getFullYear() === filteredYear && eventDate.getMonth() === filteredMonth - 1;
-  });
-  */
   const events = await getEvents();
   return events.filter(event => {
     const eventDate = new Date(event.date);
