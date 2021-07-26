@@ -9,7 +9,8 @@
     "05": "cd 05-pre-render-and-data-fetching && npm i && npm run dev",
     "06": "cd 06-project-pre-rendering-and-fetching && npm i && npm run dev",
     "07": "cd 07-optimizing-nextjs && npm i && npm run dev",
-    "start": "npm run 07"
+    "08": "cd 08-backend && npm i && npm run dev",
+    "start": "npm run 08"
   },
   "repository": {
     "type": "git",
