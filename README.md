@@ -4,6 +4,27 @@ This Repository is for the projects and sections of the udemy tutorial "Next.js 
 ## Notes
 Not every section and project is done exactly the same way as Maximilian did in the course videos.
 
+## How to Use
+### Quickstart
+Clone this repository and run
+```
+npm run start
+```
+to run the latest section project
+
+### Start a section by choice
+For example, typing the following will run the project in the folder "08-backend":
+```
+npm run 08
+```
+or
+```
+npm run 03
+```
+to start the 3rd section project.
+
+Use any section number to run it.
+
 ## Modifications
 ### Section 4
 Got rid of the EventSummary component and put the h2 header into the EventLogistics component. It was already there as imageAlt prop.
@@ -18,3 +39,10 @@ my Decisions:
 - Filtered Event Page, Path: /events/[...slug] -> getServerSideProps
 
 "dummy-data.json" removed. I created an folder "api" beneath the components folder. This API Folder holds the async request to Firebase with transformation of the results. This API gets called in every page accessing events.
+
+## Important Notes
+### Section 8
+You need to rename or copy the file "feedback.example.json" to "feedback.json" in the data folder for the section 8 to work.
+
+## License
+MIT :)
