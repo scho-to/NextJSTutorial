@@ -48,7 +48,7 @@ I did not use MongoDB to connect to a database, instead I used the flat-file dat
 You need to rename or copy the file "feedback.example.json" to "feedback.json" in the data folder for the section 8 to work.
 
 ### General
-You need to set up your own firebase projects and modify the links to your realtime database in sections 6 and 7 in the aoi/events.js file.
+You need to set up your own firebase projects and modify the links to your realtime database in sections 6 and 7 in the api/events.js file.
 
 ## License
 MIT :)
