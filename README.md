@@ -1,5 +1,5 @@
 # NextJSTutorial
-This Repository is for the projects and sections of the udemy tutorial "Next.js &amp; React - The Complete Guide (incl. Two Paths!)" by Maximilian Schwarzmüller.
+This Repository is for the projects and sections of the udemy tutorial ["Next.js &amp; React - The Complete Guide (incl. Two Paths!)"](https://www.udemy.com/course/nextjs-react-the-complete-guide/) by [Maximilian Schwarzmüller](https://www.udemy.com/user/maximilian-schwarzmuller/).
 
 ## Notes
 Not every section and project is done exactly the same way as Maximilian did in the course videos.
