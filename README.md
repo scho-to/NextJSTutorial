@@ -40,9 +40,15 @@ my Decisions:
 
 "dummy-data.json" removed. I created an folder "api" beneath the components folder. This API Folder holds the async request to Firebase with transformation of the results. This API gets called in every page accessing events.
 
+### Section 9
+I did not use MongoDB to connect to a database, instead I used the flat-file database [StormDB](https://github.com/TomPrograms/stormdb). That way, I dont need to check any connections to external MongoDB-Servers. Go to the [Github-Project](https://github.com/TomPrograms/stormdb) if you want to know more about it.
+
 ## Important Notes
 ### Section 8
 You need to rename or copy the file "feedback.example.json" to "feedback.json" in the data folder for the section 8 to work.
+
+### General
+You need to set up your own firebase projects and modify the links to your realtime database in sections 6 and 7 in the aoi/events.js file.
 
 ## License
 MIT :)
