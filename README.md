@@ -5,6 +5,12 @@ This Repository is for the projects and sections of the udemy tutorial ["Next.js
 Not every section and project is done exactly the same way as Maximilian did in the course videos.
 
 ## How to Use
+### Links
+#### Section 8
+You need to rename or copy the file "feedback.example.json" to "feedback.json" in the data folder for the section 8 to work.
+#### General
+There is a file "api-link.js" in the "global_helper" directory beneath the project folders of this repository. You can change the Firebase Link there to your firebase database. It is used in all places, where Maximilian uses the "events.json"-Firebase-API-Links.
+
 ### Quickstart
 Clone this repository and run
 ```
@@ -42,13 +48,6 @@ my Decisions:
 
 ### Section 9 and 10
 I did not use MongoDB to connect to a database, instead I used the flat-file database [StormDB](https://github.com/TomPrograms/stormdb). That way, I dont need to check any connections to external MongoDB-Servers. Go to the [Github-Project](https://github.com/TomPrograms/stormdb) if you want to know more about it.
-
-## How to Use
-### Section 8
-You need to rename or copy the file "feedback.example.json" to "feedback.json" in the data folder for the section 8 to work.
-
-### General
-There is a file "api-link.js" in the "global_helper" directory beneath the project folders of this repository. You can change the Firebase Link there to your firebase database. It is used in all places, where Maximilian uses the "events.json"-Firebase-API-Links.
 
 ## License
 MIT :)
