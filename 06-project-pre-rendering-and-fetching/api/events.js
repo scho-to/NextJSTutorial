@@ -1,8 +1,8 @@
-export const API_DOMAIN = 'https://nextjs-course-udemy-default-rtdb.europe-west1.firebasedatabase.app/events.json';
+import FIREBASE_EVENTS_LINK from '../../global_helper/api-link';
 
 export async function getEvents() {
 
-  const response = await fetch(API_DOMAIN);
+  const response = await fetch(FIREBASE_EVENTS_LINK);
   const data = await response.json();
 
   const transformedEvents = [];

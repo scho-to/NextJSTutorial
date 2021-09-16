@@ -1,5 +1,7 @@
+import FIREBASE_EVENTS_LINK from '../../global_helper/api-link';
+
 export async function getAllEvents() {
-  const response = await fetch('https://nextjs-course-udemy-default-rtdb.europe-west1.firebasedatabase.app/events.json');
+  const response = await fetch(FIREBASE_EVENTS_LINK);
   const data = await response.json();
 
   const events = [];
