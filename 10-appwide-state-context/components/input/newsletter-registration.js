@@ -1,36 +1,63 @@
-import { useRef } from 'react';
+import { useRef, useContext } from 'react';
 
 import classes from './newsletter-registration.module.css';
+import NotificationContext from '../../store/notification-context';
 
-export function isEmail(val){
+export function isEmail(val) {
   return val.includes("@");
 }
 
 function NewsletterRegistration() {
   const newsletterInput = useRef();
+  const notificationCtx = useContext(NotificationContext);
 
   function registrationHandler(event) {
     event.preventDefault();
     const newsletterEmail = newsletterInput.current.value;
+
+    notificationCtx.showNotification({
+      title: 'Signing up...',
+      message: 'Registering for newsletter.',
+      status: 'pending'
+    })
 
     // fetch user input (state or refs)
     // optional: validate input
     // send valid data to API
     if (isEmail(newsletterEmail)) {
       fetch('/api/newsletter', {
-        method: 'POST',
-        body: JSON.stringify({ email: newsletterEmail }),
-        headers: {
-          'Content-Type': "application/json"
-        }
-      })
-        .then(res => res.json())
+          method: 'POST',
+          body: JSON.stringify({ email: newsletterEmail }),
+          headers: {
+            'Content-Type': "application/json"
+          }
+        })
         .then(res => {
-          console.log(res);
+          if (res.ok) {
+            return res.json();
+          }
+
+          return res.json().then(data => {
+            throw new Error(data.message || 'Something went wrong!');
+          })
+        })
+        .then(res => {
+          notificationCtx.showNotification({
+            title: 'Success',
+            message: 'Sucessfully registered for newsletter!',
+            status: 'success'
+          })
           newsletterInput.current.value = "";
+        })
+        .catch(error => {
+          notificationCtx.showNotification({
+            title: 'Error',
+            message: error.message || 'Smoething went wrong!',
+            status: 'error'
+          })
         });
     }
-    
+
   }
 
   return (
