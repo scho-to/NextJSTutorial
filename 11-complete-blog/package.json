@@ -1,5 +1,5 @@
 {
-  "name": "09-project-backend",
+  "name": "11-complete-blog",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,13 +9,12 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "next": "^12.0.0",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "stormdb": "^0.5.2"
+    "next": "12.0.0",
+    "react": "17.0.2",
+    "react-dom": "17.0.2"
   },
   "devDependencies": {
-    "eslint": "7.31.0",
-    "eslint-config-next": "11.0.1"
+    "eslint": "7.32.0",
+    "eslint-config-next": "12.0.0"
   }
 }
