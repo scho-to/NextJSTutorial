@@ -12,7 +12,8 @@
     "08": "cd 08-backend && npm i && npm run dev",
     "09": "cd 09-project-backend && npm i && npm run dev",
     "10": "cd 10-appwide-state-context && npm i && npm run dev",
-    "start": "npm run 10"
+    "11": "cd 11-complete-blog && npm i && npm run dev",
+    "start": "npm run 11"
   },
   "repository": {
     "type": "git",
